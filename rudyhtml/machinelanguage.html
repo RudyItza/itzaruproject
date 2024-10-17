@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html ng-app="bmiApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Machine Language Converter</title>
+
+    <!-- Link External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Icons css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Stylesheets -->
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <h2 class="sixtyfour"><i class="fa fa-snowflake-o" aria-hidden="true"></i> FOC⚜️</h2>
+    <span class="credits">
+        <i class="fa fa-users" aria-hidden="true"></i> Rudy, Itza
+    </span>
+</header><!-- Header -->
+
+<nav>
+    <h3><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Menu</h3>
+    <ul>
+        <li><i class="fa fa-desktop" aria-hidden="true"></i><a href="dashboard.html"> Dashboard</a></li>
+        <li id="active"><a href="project.html"><i class="fa fa-cog" aria-hidden="true"></i> Project</a></li>
+        <li><a href="concepts.html"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Concepts</a></li>
+        <li><a href="database.html"><i class="fa fa-server" aria-hidden="true"></i> Database</a></li>
+        <li><a href="documentation.html"><i class="fa fa-files-o" aria-hidden="true"></i> Documentation</a></li>
+        <li><a href="team.html"><i class="fa fa-globe" aria-hidden="true"></i> Dev Team</a></li>
+    </ul>
+</nav><!-- Nav -->
+
+<article>
+    <h2><span>Course</span> <i class="fa fa-share" aria-hidden="true"></i> Fundamental of Computing</h2>
+
+    <div id="title">
+        <h1><i class="fa fa-share" aria-hidden="true"></i><i class="fa fa-share" aria-hidden="true"></i>
+        <a id="green" href="project.html"> Projects</a> <i class="fa fa-angle-right" aria-hidden="true"></i> Machine Language</h1>
+    </div>
+
+    <!-- Content -->
+    <style>
+        .button-image-container {
+            display: flex;
+            align-items: flex-start; 
+            gap: 50px; 
+            margin-top: 50px;
+        }
+
+        .button {
+            background-color: #1e793c; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .buttons {
+            margin-right: 20px;
+        }
+
+        #Englishinstrucitons {
+            width: 300px; 
+            height: 100px;
+            display: none; /* Initially hidden */
+            margin-left: 450px;
+        }
+
+        #MLinstrucitons {
+            display: block;
+            width: 700px; 
+            margin-left: 5px; /* Add more space between buttons and big image */
+        }
+
+        img {
+            margin: 0;
+            padding: 0;
+        }
+
+        .image-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Reduce gap between small and large image */
+        }
+    </style>
+
+    <h3>A Simple Interactive Machine Language</h3>
+
+    <div class="button-image-container">
+        <div class="buttons">
+            <button class="button" onclick="showImages('ml1.png', 'EI1.png')">156C</button><br>
+            <button class="button" onclick="showImages('ml2.png', 'EI2.png')">166D</button><br>
+            <button class="button" onclick="showImages('ml3.png', 'EI3.png')">5056</button><br>
+            <button class="button" onclick="showImages('ml4.png', 'EI4.png')">306E</button><br>
+            <button class="button" onclick="showImages('ml5.png', 'EI5.png')">C000</button><br>
+        </div>
+        
+        <div class="image-wrapper">
+            <!-- Small image on the left -->
+            <img id="Englishinstrucitons" src="">
+            <!-- Large image on the right -->
+            <img id="MLinstrucitons" src="images/MLblank.png">
+        </div>
+    </div>
+</article>
+
+<script>
+    function showImages(mlSrc, eiSrc) {
+        document.getElementById('MLinstrucitons').src = 'images/' + mlSrc;
+        var englishImg = document.getElementById('Englishinstrucitons');
+        englishImg.src = 'images/' + eiSrc;
+        englishImg.style.display = 'block'; // Change the display to block when button is clicked
+    }
+</script>
+
+<!-- Footer -->
+<footer>
+    <span id="credits">
+        <i class="fa fa-copyright" aria-hidden="true"></i> 2024, All Rights Reserved 
+        | <i class="fa fa-code" aria-hidden="true"></i> Developed by Rudy Itza 
+        | <i class="fa fa-heart" aria-hidden="true"></i> Made with Passion
+    </span>
+</footer>
+
+</body>
+</html>
+
+
+
+

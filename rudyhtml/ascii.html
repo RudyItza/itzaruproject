@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html ng-app="bmiApp">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ascii Converter</title>
+
+	<!-- Link External CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Icons css 	-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Stylesheets -->
+	<link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Flexbox container to align elements left and right */
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    /* Left side input and button */
+    .left-content {
+      width: 40%;
+      text-align: left;
+    }
+
+    /* Right side image */
+    .right-content img {
+      width: 100%;
+      height: auto;
+      max-width: 950px;
+    }
+    
+    /* Styling for footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+
+
+    .sixtyfour {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0,
+    "XELA" 0,
+    "YELA" 0;
+}
+  </style>
+  
+</head>
+
+<body>
+<header>
+    <h2 class="sixtyfour"><i class="fa fa-snowflake-o" aria-hidden="true"></i> FOC⚜️</h2>
+
+  <span class="credits">
+  	<i class="fa fa-users" aria-hidden="true"></i>
+  	Rudy, Itza
+	</span>
+</header><!-- Header -->
+
+<nav>
+	<h3><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Menu</h3>
+
+	<ul>
+      <li> <i class="fa fa-desktop" aria-hidden="true"></i><a href="dashboard.html"> Dashboard</a></li>
+      <li id="active"><a href="project.html"><i class="fa fa-cog" aria-hidden="true"></i> Project</a></li>
+      <li><a href="concepts.html"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Concepts</a></li>
+      <li><a href="database.html"><i class="fa fa-server" aria-hidden="true"></i> Database</a></li>
+      <li><a href="documentation.html"><i class="fa fa-files-o" aria-hidden="true"></i> Documentation</a></li>
+      <li><a href="team.html"><i class="fa fa-globe" aria-hidden="true"></i> Dev Team</a></li>
+    </ul>
+</nav><!-- Nav -->
+
+<article>
+	<h2><span>Course</span> <i class="fa fa-share" aria-hidden="true"></i> Fundamental of Computing</h2>
+
+	<div id="title">
+		<h1><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i><a id="green" href="project.html"> Projects</a> <i class="fa fa-angle-right" aria-hidden="true"></i> Ascii Converter</h1>
+	</div>
+
+<!-- Content -->
+<section class="flex-container">
+  <!-- Left content: Input, Button, Output -->
+  <div class="left-content">
+    <p>Enter any number from 0 to 127:</p>
+    <input id="inputdec" style="width: 100%; margin-bottom: 10px;">
+    <br>
+    <button onclick="decToASCII()">Submit</button>
+    <p></p>
+    <p>ASCII Value:</p>
+    <p id="demo"></p>
+  </div>
+
+  <!-- Right content: Image -->
+  <div class="right-content">
+    <img src="images/ascii.png" alt="ASCII Table">
+  </div>
+</section>
+
+<script>
+  function decToASCII() {
+    var x = document.getElementById("inputdec").value;
+    var res = String.fromCharCode(x);
+    document.getElementById("demo").innerHTML = res;
+    console.log(res);
+  }
+</script>
+
+</article>
+
+<!-- Footer -->
+<footer>
+  <span id="credits">
+    <i class="fa fa-copyright" aria-hidden="true"></i> 2024, All Rights Reserved 
+    | <i class="fa fa-code" aria-hidden="true"></i> Developed by Rudy Itza 
+    | <i class="fa fa-heart" aria-hidden="true"></i> Made with Passion
+  </span>
+</footer>
+
+</body>
+</html>
